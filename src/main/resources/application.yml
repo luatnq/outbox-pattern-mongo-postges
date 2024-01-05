@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+  data:
+    mongodb:
+      uri: mongodb://172.168.200.202:20000,172.168.200.202:20001,172.168.200.202:20002/?replicaSet=dbrs
+      database: test
+  jpa:
+    hibernate:
+      ddl-auto: update
+database:
+  include:
+    list: test
+collection:
+  include:
+    list: "test.books,test.computers,test.phones"

@@ -1,0 +1,23 @@
+version: '3.8'
+networks:
+  mongo-net:
+    name: mongo-net
+volumes:
+  dbdata6:
+services:
+  mongodb:
+    image: mongo:6-jammy
+    ports:
+      - '27017:27017'
+    volumes:
+      - dbdata6:/data/db
+      - ./src/main/resources/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+
+  postgres-db:
+    image: postgres:15.3-alpine
+    container_name: postgres-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
