@@ -15,6 +15,7 @@
   <description>outbox-pattern</description>
   <properties>
     <java.version>17</java.version>
+    <debezium.version>2.5.0.Final</debezium.version>
   </properties>
   <dependencies>
     <dependency>
@@ -48,23 +49,23 @@
     <dependency>
       <groupId>io.debezium</groupId>
       <artifactId>debezium-api</artifactId>
-      <version>2.1.2.Final</version>
+      <version>${debezium.version}</version>
     </dependency>
     <dependency>
       <groupId>io.debezium</groupId>
       <artifactId>debezium-embedded</artifactId>
-      <version>2.1.2.Final</version>
+      <version>${debezium.version}</version>
     </dependency>
     <dependency>
       <groupId>io.debezium</groupId>
       <artifactId>debezium-connector-mongodb</artifactId>
-      <version>2.1.2.Final</version>
+      <version>${debezium.version}</version>
     </dependency>
-    <dependency>
-      <groupId>io.debezium</groupId>
-      <artifactId>debezium-storage-jdbc</artifactId>
-      <version>2.3.0.Final</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>io.debezium</groupId>-->
+<!--      <artifactId>debezium-storage-jdbc</artifactId>-->
+<!--      <version>2.3.0.Final</version>-->
+<!--    </dependency>-->
   </dependencies>
 
 </project>

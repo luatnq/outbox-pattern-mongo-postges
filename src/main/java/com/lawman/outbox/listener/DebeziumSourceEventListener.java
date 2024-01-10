@@ -79,6 +79,7 @@ public class DebeziumSourceEventListener {
 
   }
 
+
   @PostConstruct
   private void start() {
     this.executor.execute(debeziumEngine);
